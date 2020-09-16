@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="d-flex justify-between">
+    <h1><%=@task.title%></h1>
+    <%= link_to("Edit", edit_restaurant_path, class: "buttom")%>
+  </div>
+  <p class="description"><%=@task.details%></p>
+  <p> <input id="completed"type="checkbox" <%="checked" if @task.completed%>> This Task is completed</p>
+  <%=link_to("Back to list", tasks_path) %>
+</div>

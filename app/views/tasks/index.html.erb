@@ -1,0 +1,22 @@
+<%# @task created in the controller - has all tasks%>
+<div class="container">
+  <div class="table">
+    <h1>TASKS</h1>
+    <%@tasks.each do |task|%>
+    <div class="row">
+      <div class="column">
+        <input type="checkbox" <%="checked" if task.completed %>>
+      </div>
+      <div class="column" style="margin-right: 15px;">
+        <%= link_to(task.title, task_path(task))%>
+      </div>
+      <%= link_to("delete", task_path(task), class: "buttom", method: :delete, data: { confirm: 'Are you sure?'} )%>
+      <%# link_to 'Remove this Restaurant', restaurant_path(@restaurant), method: :delete, data: { confirm: 'Are you Sure?' }%>
+    </div>
+    <%end%>
+  </div>
+  <h3><%=link_to("Add a New Task", new_task_path)%></h3>
+</div>
+
+
+

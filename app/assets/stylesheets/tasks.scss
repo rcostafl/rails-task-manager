@@ -1,0 +1,39 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container{
+  margin: auto;
+}
+
+.row{
+  display: flex;
+}
+
+.row > .column:first-of-type{
+  width: 20px;
+  margin-right: 5px;
+}
+
+
+.description {
+  background-color: #fefbe1;
+  padding: 20px;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+
+.buttom{
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  text-align: center;
+}
